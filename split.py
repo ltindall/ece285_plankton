@@ -1,6 +1,28 @@
+'''
+This script should be placed in a directory which contains 
+an all_images directory. In all_images there should be subdirectories 
+with names according to classification labels. 
+
+There should also be an empty keras_images directory. This directory 
+will be populated with a train and test directory each filled with 
+subdirectories according to classification labels. 
+
+These train and test directories can be passed into Keras'
+ImageDataGenerator.flow_from_directory method. 
+
+Usage: 
+    python split.py
+
+
+'''
+
+
+
 import os
 import shutil
 from random import shuffle
+
+
 
 src_dir = '/var/home/l_ltindall/plankton_images'
 
