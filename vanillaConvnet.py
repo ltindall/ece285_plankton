@@ -26,8 +26,12 @@ def getModel( output_dim ):
     #Freeze all layers of VGG16 and Compile the model
     for layers in vgg_model.layers:
         layers.trainable = False;
-        
+    '''    
     tl_model.compile(optimizer='rmsprop',
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+    '''
+    tl_model.compile(optimizer='adam',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
               
@@ -64,10 +68,12 @@ if __name__ == '__main__':
     #Train the model
     history = tl_model.fit_generator(train_generator,
         steps_per_epoch = 50,
-        epochs = 100,
+        epochs = 200,
         verbose = 1,
         validation_data = test_generator,
         validation_steps = 20)
+
+    tl_model.save('plankton_model.h5')
     
     #Test the model
     plt.plot(history.history['acc'])

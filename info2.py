@@ -4,15 +4,12 @@ from random import shuffle
 
 src_dir = '/var/home/l_ltindall/plankton_images'
 
-if not os.path.exists(src_dir+'/keras_images/train'):
-    os.makedirs(src_dir+'/keras_images/train')
-
-if not os.path.exists(src_dir+'/keras_images/test'):
-    os.makedirs(src_dir+'/keras_images/test')
 
 src_dirs = os.listdir(src_dir+'/all_images')
 print src_dirs
 total_files = 0
+train_files = 0
+test_files = 0
 for cat in src_dirs: 
     if os.path.isdir(src_dir+'/all_images/'+cat): 
         #print 'files in ',cat
@@ -21,25 +18,21 @@ for cat in src_dirs:
         #print len(files)
         total_files = total_files + len(files)
    
-	#print files[:10]
-        shuffle(files)
-        #print "vs."
-        #print files[:10]
 	
-	os.makedirs(src_dir+'/keras_images/train/'+cat)
-        os.makedirs(src_dir+'/keras_images/test/'+cat)
         
         i = 0
         for f in files: 
             if i >230: 
-                shutil.copy(src_dir+'/all_images/'+cat+'/'+f,src_dir+'/keras_images/train/'+cat+'/'+f)
+                train_files = train_files + 1
             else: 
-                shutil.copy(src_dir+'/all_images/'+cat+'/'+f,src_dir+'/keras_images/test/'+cat+'/'+f)
+                test_files = test_files + 1
             i = i + 1
         #print os.listdir(src_dir+'/'+cat)
         
 
-print total_files
+print 'total files = ',total_files
+print 'train files = ',train_files
+print 'test files = ',test_files
 '''
 for file_name in src_files:
     full_file_name = os.path.join(src, file_name)

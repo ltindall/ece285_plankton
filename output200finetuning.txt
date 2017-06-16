@@ -1,0 +1,23 @@
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "vanillaConvnet.py", line 47, in <module>
+    tl_model = getModel( output_dim ) 
+  File "vanillaConvnet.py", line 15, in getModel
+    vgg_model = VGG16( weights='imagenet', include_top=True )
+  File "/usr/lib64/python2.7/site-packages/keras/applications/vgg16.py", line 169, in VGG16
+    model.load_weights(weights_path)
+  File "/usr/lib64/python2.7/site-packages/keras/engine/topology.py", line 2538, in load_weights
+    load_weights_from_hdf5_group(f, self.layers)
+  File "/usr/lib64/python2.7/site-packages/keras/engine/topology.py", line 2970, in load_weights_from_hdf5_group
+    K.batch_set_value(weight_value_tuples)
+  File "/usr/lib64/python2.7/site-packages/keras/backend/tensorflow_backend.py", line 2140, in batch_set_value
+    value = np.asarray(value)
+  File "/root/.local/lib/python2.7/site-packages/numpy/core/numeric.py", line 531, in asarray
+    return array(a, dtype, copy=False, order=order)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-nCYoKW-build/h5py/_objects.c:2840)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-nCYoKW-build/h5py/_objects.c:2798)
+  File "/usr/lib64/python2.7/site-packages/h5py/_hl/dataset.py", line 694, in __array__
+    self.read_direct(arr)
+  File "/usr/lib64/python2.7/site-packages/h5py/_hl/dataset.py", line 655, in read_direct
+    self.id.read(mspace, fspace, dest, dxpl=self._dxpl)
+KeyboardInterrupt

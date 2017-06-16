@@ -1,0 +1,30 @@
+Using TensorFlow backend.
+2017-06-14 22:11:22.156118: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-14 22:11:22.156155: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-14 22:11:22.156160: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-14 22:11:22.156164: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-14 22:11:22.156168: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-14 22:11:22.437276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 0 with properties: 
+name: GeForce GTX TITAN X
+major: 5 minor: 2 memoryClockRate (GHz) 1.076
+pciBusID 0000:81:00.0
+Total memory: 11.92GiB
+Free memory: 11.35GiB
+2017-06-14 22:11:22.437331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:908] DMA: 0 
+2017-06-14 22:11:22.437342: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 0:   Y 
+2017-06-14 22:11:22.437377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX TITAN X, pci bus id: 0000:81:00.0)
+/usr/lib64/python2.7/site-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  warnings.warn('Matplotlib is building the font cache using fc-list. This may take a moment.')
+Model loaded.
+Working on filters: [0]
+Working on filters: [1]
+Working on filters: [2]
+Working on filters: [3]
+Working on filters: [4]
+Working on filters: [5]
+Working on filters: [6]
+Working on filters: [7]
+Working on filters: [8]
+Working on filters: [9]
+Working on filters: [10]
+Working on filters: [11]
