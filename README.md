@@ -4,7 +4,7 @@
 
 ## Environment
 + Python 2.7
-+ Keras <= 2.0 with Tensorflow backend 
++ Keras >= 2.0 configured with Tensorflow backend 
 
 ## Setup
 1. Download and extract images from [dropbox
@@ -14,10 +14,10 @@
 
 3. create empty directory named **_keras_images_**
 
-4. run **_split.py_** script to split images into training and test set
+4. run [**_split.py_**](split.py) script to split images into training and test set
 
 
 ## Usage: 
-1. run vggTransfer.py 
+1. run [**_vggTransfer.py_**](vggTransfer.py) 
 
 2. Keras model is saved in **_plankton_model.h5_** 
